@@ -121,9 +121,11 @@ h1 {
     font-size: 80px;
 }
 
+
+/* 
 h3 {
     font-size: 30px;
-}
+} */
 
 
 /* Styling the header, giving it a height, a background color, and some top padding */
@@ -521,11 +523,17 @@ h3 {
 }
 
 .main-image-wrap {
-    max-width: 50%;
+    max-width: 75%;
     height: auto;
     /* padding-bottom: 5px; */
-    /* float: left; */
-    display: block;
+    float: right;
+    /* display: block; */
+    margin: 10px;
+}
+
+#nerdydog {
+    height: 200%;
+    width: 200%;
 }
 
 .client-image-container {
@@ -558,6 +566,16 @@ h3 {
 .main-p {
     font-family: "Gill Sans", "Lucida Sans", Tahoma, Verdana, sans-serif;
     font-size: 15pt;
+    display: block;
+    /* line-height: 30px; */
+    color: #424949;
+    font-weight: 300;
+    line-height: 1;
+}
+
+#index-text-box {
+    font-family: "Gill Sans", "Lucida Sans", Tahoma, Verdana, sans-serif;
+    font-size: 25pt;
     display: block;
     /* line-height: 30px; */
     color: #424949;
@@ -627,15 +645,24 @@ article.wrapper article header {
 
 section.wrapper.style1,
 article.wrapper.style1 {
-    background: linear-gradient(#f8f9fa, #5385c1);
+    /* background: linear-gradient(#f8f9fa, #5385c1);
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
     color: #bacee6;
     font-family: "Gill Sans", "Lucida Sans", Tahoma, Verdana, sans-serif;
+    height: max-content;
 }
 
 section.wrapper.style1 header h2,
 article.wrapper.style1 header h2 {
     color: #5385c1;
     font-family: "Gill Sans", "Lucida Sans", Tahoma, Verdana, sans-serif;
+}
+
+#backup-plan {
+    background: linear-gradient(#f8f9fa, #5385c1);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 section.wrapper.style1 header p,
