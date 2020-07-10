@@ -89,7 +89,7 @@ def breeds():
 
 @app.route("/table")
 def table():
-    table = db.session.query(Pet.type, Pet.breeds,Pet.age,Pet.gender,Pet.state,Pet.city).limit(2000)
+    table = db.session.query(Pet.type, Pet.breeds,Pet.age,Pet.gender,Pet.state,Pet.city).all()
     pet_schema = PetSchema(many=True)
     output = pet_schema.dump(table)
     return jsonify({"table": output})
