@@ -18,7 +18,7 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 
 // Grab the data with d3
-d3.json("http://127.0.0.1:5000/pets", function(response) {
+d3.json("https://unc-project-2.herokuapp.com/pets", function(response) {
 
   // Create a new marker cluster group
   var markers = L.markerClusterGroup();
