@@ -1,4 +1,4 @@
-const petsData = 'http://127.0.0.1:5000/pets';
+const petsData = 'https://unc-project-2.herokuapp.com/pets';
 
 var dogColors = [];
 var catColors = [];

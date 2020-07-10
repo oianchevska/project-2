@@ -10,8 +10,7 @@ app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
 CORS(app)
 
-db_url = os.environ[
-    "DATABASE_URL"] = "postgres://lxnczqxnnsixtt:25c4af3fdf10105af3ccf6dcdb156d9b05dfa289a8ac251d505c35ca56355b96@ec2-34-192-173-173.compute-1.amazonaws.com:5432/d21o41cjku2a3l"
+db_url = os.environ["DATABASE_URL"]
 app.config["SQLALCHEMY_DATABASE_URI"] = db_url
 
 db = SQLAlchemy(app)
