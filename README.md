@@ -1,2 +1,2 @@
 # Wicked Tailor 
-![Cruella De Vil](h)
+![Cruella De Vil](cruella-de-vil.jpg)
