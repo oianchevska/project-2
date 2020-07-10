@@ -90,4 +90,122 @@
 
 </body>
 
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Project 2</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- Dogs Title -->
+            <div class="row">
+                <div class="col-md-12 text-center" style="font-family: 'sans-serif';">
+                    <h1>Dogs</h1>
+                    <hr>
+                </div>
+            </div>
+            <!-- Dogs Color Menu -->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="well" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; text-align: center; border-radius: 25px; font-family: sans-serif; margin-bottom: 10px;">
+                        <h4 style="font-size: 18px; color: black;">Dog Coat Color</h4>
+                        <select id="selDogColor" onchange="optionChanged(this.value)" style="padding: 5px; font-size: 14px; border-radius: 25px;"></select>
+                    </div>
+                </div>
+            </div>
+            <!-- Dog Gauges -->
+            <div class="row">
+                <!-- Gauge 1 -->
+                <div class="col-md-4" style="margin-top: 20px; margin-bottom: 10px;">
+                    <div id="gaugeDog1" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; border-radius: 25px;"></div>
+                </div>
+                <!-- Gauge 2 -->
+                <div class="col-md-4" style="margin-top: 20px; margin-bottom: 10px;">
+                    <div id="gaugeDog2" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; border-radius: 25px;"></div>
+                </div>
+                <!-- Gauge 3 -->
+                <div class="col-md-4" style="margin-top: 20px; margin-bottom: 10px;">
+                    <div id="gaugeDog3" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; border-radius: 25px;"></div>
+                </div>
+            </div>
+            <!-- Dog Bar & Dog Pie -->
+            <div  class="row">
+                <!-- Bar -->
+                <div class="col-md-7" style="margin-top: 20px; margin-bottom: 10px;">
+                    <div id="barDog" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 20px; border-radius: 25px;"></div>
+                </div>
+                <!-- Pie -->
+                <div class="col-md-5" style="margin-top: 20px; margin-bottom: 10px;">
+                    <div id="pieDog" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 20px; border-radius: 25px;"></div>
+                </div>
+            </div>
+            <!-- Dog Bubble -->
+            <div class="row">
+                <!-- Bubble -->
+                <div class="col-md-12" style="margin-top: 20px; margin-bottom: 100px;">
+                    <div id="bubbleDog" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 20px; border-radius: 25px;"></div>
+                </div>
+            </div>
+            <hr style="height: 2px;">
+            <hr>
+            <!-- Cats Title -->
+            <div class="row">
+                <div class="col-md-12 text-center" style="font-family: 'sans-serif';">
+                    <h1>Cats</h1>
+                    <hr>
+                </div>
+            </div>
+            <!-- Cats Color Menu -->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="well" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; text-align: center; border-radius: 25px; font-family: sans-serif; margin-bottom: 10px;">
+                        <h4 style="font-size: 18px; color: black;">Cat Coat Color</h4>
+                        <select id="selCatColor" onchange="catOptionChanged(this.value)" style="padding: 5px; font-size: 14px; border-radius: 25px;"></select>
+                    </div>
+                </div>
+            </div>
+            <!-- Cat Gauges -->
+            <div class="row">
+                <!-- Gauge 1 -->
+                <div class="col-md-4" style="margin-top: 20px; margin-bottom: 10px;">
+                    <div id="gaugeCat1" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; border-radius: 25px;"></div>
+                </div>
+                <!-- Gauge 2 -->
+                <div class="col-md-4" style="margin-top: 20px; margin-bottom: 10px;">
+                    <div id="gaugeCat2" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; border-radius: 25px;"></div>
+                </div>
+                <!-- Gauge 3 -->
+                <div class="col-md-4" style="margin-top: 20px; margin-bottom: 10px;">
+                    <div id="gaugeCat3" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; border-radius: 25px;"></div>
+                </div>
+            </div>
+            <!-- Cat Bar & Cat Pie -->
+            <div class="row">
+                <!-- Bar -->
+                <div class="col-md-7" style="margin-top: 20px; margin-bottom: 10px;">
+                    <div id="barCat" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 20px; border-radius: 25px;"></div>
+                </div>
+                <!-- Pie -->
+                <div class="col-md-5" style="margin-top: 20px; margin-bottom: 10px;">
+                    <div id="pieCat" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 20px; border-radius: 25px;"></div>
+                </div>
+            </div>
+            <!-- Cat Bubble -->
+            <div class="row">
+                <!-- Bubble -->
+                <div class="col-md-12" style="margin-top: 20px; margin-bottom: 100px;">
+                    <div id="bubbleCat" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 20px; border-radius: 25px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script language="javascript" type="text/javascript" src="static/js/app.js"></script>
+    </body>
 </html>
