@@ -61,7 +61,7 @@ findButton.on("click", function () {
             };
 
             if (inputBreed !== "") {
-                breedFlag = rec["breed"] === inputBreed;
+                breedFlag = rec["breeds"] === inputBreed;
             };
 
             if (inputAge !== "") {
