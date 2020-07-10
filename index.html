@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 
-<!-- create a root component that will contain all of the doc -->
-
 <html lang="en">
 
 <head>
     <meta charset="UTF 8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>Doggie Data, Inc.</title>
@@ -22,15 +19,6 @@
 
 <body>
 
-    <!-- data-target="#navbarSupportedContent -->
-    <!-- aria-controls="navbarSupportedContent" -->
-    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav navbar-right ml-auto">
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Plots
-                </a> -->
     <!-- -------------BEGIN NAV BAR --------------------- -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" id="badge" href="index.html">Doggie Data, Inc.</a>
@@ -43,7 +31,7 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Clients
+                    Client Portal
                     </a>
                     <div class="dropdown-menu navbar-li-a" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="clients/cruella.html">Cruella de Vil</a>
@@ -52,9 +40,9 @@
                         <a class="dropdown-item" href="clients/elle.html.html">Elle Woods</a>
                     </div>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="care.html">Pet Care <span class="sr-only">(current)</span></a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">About Us</a>
                 </li>
@@ -68,42 +56,27 @@
 
 
     <!-- -------------BEGIN LANDING CONTAINER --------------------- -->
-    <!-- both as one section, each block as an article -->
     <div class="container main-container">
         <section class="row">
-            <!-- -------------BEGIN LANDING-FEATURED CONTAINER --------------------- -->
-
             <div class="col-md-12 main-content" id="main-column">
                 <article>
-                    <h1 class="display-4 main-header">data for the modern pet-seeker</h1>
+                    <h1 class="display-4 main-header"> welcome to doggie data, inc.<br>data for the modern pet-seeker</h1>
                     <hr class="my-4">
-                    <!-- https://getbootstrap.com/docs/4.1/content/images/ -->
                 </article>
             </div>
             <section class="row">
-                <!-- <article> -->
-                <div class="image round col-md-6">
-                    <img class="main-image-wrap img-fluid" src="images/main.jpg">
-                </div>
-                <!-- </article> -->
-                <!-- <article> -->
-                <div class="col-md-6">
-                    <p class="main-p text-center align-middle">Doggie Data, Inc. believes that everyone should be able to find the perfect pet. We let the data do the talking when it comes to consultation finding the perfect new addition to your family. Which breed is best with kids? Or in an
-                        apartment? What about a big back yard?
-                        <br><br> Queue up the questions, and we'll bring you the (data-driven) answers!
+                <div class="image round col-md-12">
+                    <img class="main-image-wrap img-fluid " src="images/main.jpg">
+                    <h3 class=" text-center align-middle" id="index-text-box">
+                        <br>
+                        <br> Doggie Data, Inc. believes that everyone should be able to find the perfect pet. We let the data do the talking when it comes to finding the perfect new addition to your family.
+                        <br><br>Which breed is best with kids? Or in an apartment? What about a big back yard?
+                        <!-- <hr class="my-4"> -->
+                        <br><br> Queue up the questions, and we'll bring you the (data-driven) answers! Reach out today to schedule a consultation with our Sales team.
 
-                    </p>
+                    </h3>
                 </div>
-                <!-- </article> -->
             </section>
-
-            <!-- class="rounded float-center" alt="Example Image" id="expimg" -->
-
-
-            <!-- -------------BEGIN LANDING-VISUALIZATIONS CONTAINER --------------------- -->
-            <!-- <div class="col-md-1 container-break">
-            </div> -->
-
 
         </section>
     </div>

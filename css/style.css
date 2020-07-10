@@ -121,9 +121,11 @@ h1 {
     font-size: 80px;
 }
 
+
+/* 
 h3 {
     font-size: 30px;
-}
+} */
 
 
 /* Styling the header, giving it a height, a background color, and some top padding */
@@ -225,7 +227,7 @@ h3 {
 
 #banner-cruella {
     padding: 12em 0 10em 0;
-    background-image: url('../images/cruella.png');
+    background-image: url('../images/CruellaBanner.png');
     background-size: cover;
     background-position: top;
     background-attachment: fixed;
@@ -236,7 +238,7 @@ h3 {
 
 #banner-cruella h1 {
     font-size: 3.5em;
-    font-weight: 100;
+    font-weight: 600;
     color: #1B2631;
     line-height: 1em;
     margin: 0 0 0.5em 0;
@@ -291,7 +293,7 @@ h3 {
 
 #banner-dorothy {
     padding: 12em 0 10em 0;
-    background-image: url('../images/dorothy.jpg');
+    background-image: url('../images/DorothyBanner.png');
     background-size: cover;
     background-position: top;
     background-attachment: fixed;
@@ -302,7 +304,7 @@ h3 {
 
 #banner-dorothy h1 {
     font-size: 3.5em;
-    font-weight: 100;
+    font-weight: 600;
     color: #1B2631;
     line-height: 1em;
     margin: 0 0 0.5em 0;
@@ -357,7 +359,7 @@ h3 {
 
 #banner-sofia {
     padding: 12em 0 10em 0;
-    background-image: url('../images/sofia.jpg');
+    background-image: url('../images/SofiaBanner.jpeg');
     background-size: cover;
     background-position: top;
     background-attachment: fixed;
@@ -368,7 +370,7 @@ h3 {
 
 #banner-sofia h1 {
     font-size: 3.5em;
-    font-weight: 100;
+    font-weight: 600;
     color: #1B2631;
     line-height: 1em;
     margin: 0 0 0.5em 0;
@@ -423,7 +425,7 @@ h3 {
 
 #banner-elle {
     padding: 12em 0 10em 0;
-    background-image: url('../images/elle.jpg');
+    background-image: url('../images/ElleBanner.jpg');
     background-size: cover;
     background-position: top;
     background-attachment: fixed;
@@ -434,7 +436,7 @@ h3 {
 
 #banner-elle h1 {
     font-size: 3.5em;
-    font-weight: 100;
+    font-weight: 600;
     color: #1B2631;
     line-height: 1em;
     margin: 0 0 0.5em 0;
@@ -503,7 +505,7 @@ h3 {
 
 .main-header {
     text-align: center;
-    font-size: x-large;
+    font-size: xx-large;
     font-family: "Gill Sans", "Lucida Sans", Tahoma, Verdana, sans-serif;
     font-weight: lighter;
     color: #424949;
@@ -521,11 +523,17 @@ h3 {
 }
 
 .main-image-wrap {
-    max-width: 50%;
+    max-width: 75%;
     height: auto;
     /* padding-bottom: 5px; */
-    /* float: left; */
-    display: block;
+    float: right;
+    /* display: block; */
+    margin: 10px;
+}
+
+#nerdydog {
+    height: 200%;
+    width: 200%;
 }
 
 .client-image-container {
@@ -563,6 +571,16 @@ h3 {
     color: #424949;
     font-weight: 300;
     line-height: 1;
+}
+
+#index-text-box {
+    font-family: "Gill Sans", "Lucida Sans", Tahoma, Verdana, sans-serif;
+    font-size: 18pt;
+    display: block;
+    /* line-height: 30px; */
+    color: #424949;
+    font-weight: 300;
+    line-height: 1.25;
 }
 
 #main-column {
@@ -627,15 +645,24 @@ article.wrapper article header {
 
 section.wrapper.style1,
 article.wrapper.style1 {
-    background: linear-gradient(#f8f9fa, #5385c1);
+    /* background: linear-gradient(#f8f9fa, #5385c1);
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
     color: #bacee6;
     font-family: "Gill Sans", "Lucida Sans", Tahoma, Verdana, sans-serif;
+    height: max-content;
 }
 
 section.wrapper.style1 header h2,
 article.wrapper.style1 header h2 {
     color: #5385c1;
     font-family: "Gill Sans", "Lucida Sans", Tahoma, Verdana, sans-serif;
+}
+
+#backup-plan {
+    background: linear-gradient(#f8f9fa, #5385c1);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 section.wrapper.style1 header p,

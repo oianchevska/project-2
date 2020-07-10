@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 
-<!-- create a root component that will contain all of the doc -->
-
 <html lang="en">
 
 <head>
     <meta charset="UTF 8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Bootstrap Visualization Dashboard</title>
+    <title>Doggie Data, Inc.</title>
     <style>
         #expimg {
             margin: 30px;
@@ -22,15 +19,7 @@
 
 <body>
 
-    <!-- data-target="#navbarSupportedContent -->
-    <!-- aria-controls="navbarSupportedContent" -->
-    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav navbar-right ml-auto">
 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Plots
-                </a> -->
     <!-- -------------BEGIN NAV BAR --------------------- -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" id="badge" href="../index.html">Doggie Data, Inc.</a>
@@ -43,7 +32,7 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Clients
+                    Client Portal
                     </a>
                     <div class="dropdown-menu navbar-li-a" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="cruella.html">Cruella de Vil</a>
@@ -52,9 +41,9 @@
                         <a class="dropdown-item" href="elle.html">Elle Woods</a>
                     </div>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="../care.html">Pet Care <span class="sr-only">(current)</span></a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="../about.html">About Us</a>
                 </li>
@@ -67,11 +56,11 @@
     <!-- -------------END NAV BAR --------------------- -->
 
     <section id="banner-cruella">
-        <h1>Welcome, Valued Customer!</h1>
-        <p>Your requested dashboard is available below. Please contact your Account Manager with any additional requests.</p>
+
+        <h1 style="background-color: rgb(255, 255, 255, .75);">Welcome, Valued Customer!</h1>
+        <p style="background-color: rgb(255, 255, 255, .75)">Your requested dashboard is available below. Please contact your Account Manager with any additional requests.</p>
     </section>
     <!-- -------------BEGIN LANDING CONTAINER --------------------- -->
-    <!-- both as one section, each block as an article -->
     <div class="container main-container">
         <section class="row">
             <!-- -------------BEGIN LANDING-FEATURED CONTAINER --------------------- -->
@@ -80,19 +69,13 @@
                 <article>
                     <h1 class="display-4 main-header">Client: Cruella de Vil</h1>
                     <hr class="my-4">
-                    <!-- https://getbootstrap.com/docs/4.1/content/images/ -->
-                    <!-- <div class=" client-image-container">
-                        <span class="image left">
-                            <img class="main-image-wrap img-fluid rounded float-left" src="../images/cruella.png" alt="Ms. de Vil">
-                        </span>
-                    </div> -->
                     <div class="box">
                         <p class="lead main-p text-left">Former client, Ms. Cruella de Vil, has requested that we include: <br><br>
                             <dl class="lead dl-p text-left">
                                 <li> the location of dogs and cats available for adoption. </li><br>
-                                <li> how many dogs and cats are available for adoption. </li><br>
-                                <li> the color and type of coat of dogs and cats available for adoption. </li><br>
-                                <li> the listed attributes (i.e., ‘playful’ or ‘house-trained’) of dogs and cats available for adoption. </li>
+                                <li> how many dogs and cats are available by breed. </li><br>
+                                <li> the most common colors of dog and cat coats. </li><br>
+                                <li> the age, size, and breed associated with the most common coat colors. </li>
                             </dl>
                         </p>
                         <br><br>
@@ -111,32 +94,33 @@
     </div>
 
     <!-- -------------END LANDING BLOCK --------------------- -->
+    <div class="row">
+        <div class="col-md-12">
+            <canvas id="dogBreedChart"></canvas>
+        </div>
+    </div>
+
+    <hr class="my-4">
 
     <div class="row">
-      <div class="col-md-12">
-        <div id="bubble"></div>
-      </div>
+        <div class="col-md-12">
+            <canvas id="catBreedChart"></canvas>
+        </div>
     </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div id="word cloud"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div id="bar chart"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div id="gauge"></div>
-      </div>
-    </div>
+    <hr class="my-4">
+
+
+
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> -->
+    <script src="../js/dogbreeds.js"></script>
+    <script src="../js/catbreeds.js"></script>
 </body>
 
 </html>
