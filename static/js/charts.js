@@ -2,7 +2,7 @@
 function init () {
 
     console.log("init");
-    d3.json('https://unc-project-2.herokuapp.com/usdata').then(function (data) {
+    d3.json('http://127.0.0.1:5000/usdata').then(function (data) {
 
         console.log(data.usdata);
 
@@ -50,13 +50,13 @@ function init () {
                  type: "bar",
                  name: "Dogs",
           marker: {
-    color: 'rgb(176, 58, 46)'
+    color: '#990000'
   }
                 };
                 var data = [trace1,trace2]
 
                 var layout = {barmode: 'group',
-                              title: 'Number of pets in the US'
+                              title: 'Number of pets in the U.S.'
                     };
 
                 Plotly.newPlot("bar", data,layout);

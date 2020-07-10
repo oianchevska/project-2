@@ -73,16 +73,19 @@
                     <h1 class="display-4 main-header">Client: Sofia Al-Azwar</h1>
                     <hr class="my-4">
 
-                   <div class="col-md-2">
+
+                  <div class="row">
+                      <div class="col-md-2">
           <aside class="filters">
             <div class="panel panel-default">
-              <div class="panel-heading">Filter Search</div>
+              <div class="panel-heading" style="text-align: center">Filter Search</div>
+                <br>
               <div class="panel-body">
                 <form>
                   <div class="form-group">
                     <ul class="list-group" id="filters">
                       <li class="filter list-group-item">
-                        <label for="date">Enter a Type</label>
+                        <label for="date">Enter Type</label>
                         <input class="form-control" id="type" type="text" placeholder="Cat/Dog">
                       </li>
                       <li class="filter list-group-item">
@@ -91,23 +94,23 @@
                       </li>
                       <li class="filter list-group-item">
                         <label for="state">Enter Age</label>
-                        <input class="form-control" id="age" type="text" placeholder="age">
+                        <input class="form-control" id="age" type="text" placeholder="Age">
                       </li>
                         <li class="filter list-group-item">
                         <label for="country">Enter Gender</label>
-                        <input class="form-control" id="gender" type="text" placeholder="gender">
+                        <input class="form-control" id="gender" type="text" placeholder="Gender">
                         </li>
                         <li class="filter list-group-item">
-                            <label for="shape">Enter a State</label>
-                            <input class="form-control" id="state" type="text" placeholder="state">
+                            <label for="shape">Enter State</label>
+                            <input class="form-control" id="state" type="text" placeholder="State">
                         </li>
                          <li class="filter list-group-item">
-                            <label for="shape">Enter a City</label>
-                            <input class="form-control" id="city" type="text" placeholder="city">
+                            <label for="shape">Enter City</label>
+                            <input class="form-control" id="city" type="text" placeholder="City">
                         </li>
                     </ul>
                   </div>
-                  <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                  <button id="filter-btn" type="button" class="btn btn-outline-secondary">Filter Table</button>
                 </form>
               </div>
             </div>
@@ -117,22 +120,22 @@
 
 
 
-
-   <div>
-    <table id="pet-table" class="table table-striped">
+   <div style="width:80%">
+    <table id="pet-table" class="table table-bordered">
               <thead>
                 <tr>
-                  <th class="table-head">Type</th>
-                  <th class="table-head">Breeds</th>
-                  <th class="table-head">Age</th>
-                  <th class="table-head">Gender</th>
-                  <th class="table-head">State</th>
-                  <th class="table-head">City</th>
+                  <th class="font-weight-bold">Type</th>
+                  <th class="font-weight-bold">Breeds</th>
+                  <th class="font-weight-bold">Age</th>
+                  <th class="font-weight-bold">Gender</th>
+                  <th class="font-weight-bold">State</th>
+                  <th class="font-weight-bold">City</th>
                 </tr>
               </thead>
               <tbody></tbody>
             </table>
     </div>
+</div>
 
 
         </section>

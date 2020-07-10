@@ -42,7 +42,6 @@ class PetSchema(ma.SQLAlchemyAutoSchema):
             'organization_id',
             'type',
             'breeds',
-            'breeds',
             'colors',
             'age',
             'gender',
@@ -50,12 +49,13 @@ class PetSchema(ma.SQLAlchemyAutoSchema):
             'coat',
             'status',
             'status_changed_at',
-            'city',
             'state',
+            'city',
             'postcode',
             'total',
             'type'
         )
+        ordered = True
 
 
 @app.route("/")
