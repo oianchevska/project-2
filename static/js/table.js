@@ -1,7 +1,7 @@
 var tableData = undefined;
  var tbody = d3.select("tbody");
 
-d3.json('https://unc-project-2.herokuapp.comgit /table').then(function (data) {
+d3.json('https://unc-project-2.herokuapp.com/table').then(function (data) {
     console.log("table data")
     tableData=data.table
 
