@@ -10,6 +10,9 @@ def load_data():
     secret = os.environ['SECRET']
     database_url = os.environ['DATABASE_URL']
 
+    google_api_key = os.environ['GOOGLE_API_KEY']
+    google_base_url = "https://maps.googleapis.com/maps/api/geocode/json?address="
+
     base_url = "http://api.petfinder.com/v2/"
     endpoint = 'oauth2/token'
     url = base_url + endpoint
@@ -31,8 +34,13 @@ def load_data():
     query_url = f"{animal_url}?limit=100&page="
     animal_list = []
 
+    j=0
     for i in range(1, 600):
         try:
+
+            if j > 10000:
+                break
+            print("animal_request: "+str(i))
             animal_request = requests.get(query_url + str(i), headers=header).json()
 
             for rec in animal_request["animals"]:
@@ -41,6 +49,14 @@ def load_data():
                         and rec["contact"]["address"]["address1"] != None and \
                         rec["contact"]["address"]["state"] != None and rec["contact"]["address"]["postcode"] != None and \
                         rec["contact"]["address"]["country"] == "US":
+
+                    full_address = "{0},{1},{2},{3}".format(rec["contact"]["address"]["address1"],
+                                                            rec["contact"]["address"]["city"],
+                                                            rec["contact"]["address"]["state"],
+                                                            rec["contact"]["address"]["postcode"])
+                    url = google_base_url + full_address + "&key=" + google_api_key
+                    location = requests.get(url).json()["results"][0]["geometry"]["location"]
+
                     animal = {"id": rec["id"],
                               "organization_id": rec["organization_id"],
                               "type": rec["type"],
@@ -56,10 +72,13 @@ def load_data():
                               "address": rec["contact"]["address"]["address1"],
                               "city": rec["contact"]["address"]["city"],
                               "state": rec["contact"]["address"]["state"],
-                              "postcode": rec["contact"]["address"]["postcode"]
+                              "postcode": rec["contact"]["address"]["postcode"],
+                              "lat": location["lat"],
+                              "lng": location["lng"]
                               }
-
                     animal_list.append(animal)
+                    j=j+1
+                    print("Added to list: " + str(j))
         except Exception as ex:
             print(ex)
             print(animal_request)
