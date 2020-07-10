@@ -1,79 +1,211 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF 8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Doggie Data, Inc.</title>
+    <style>
+        #expimg {
+            margin: 30px;
+        }
+    </style>
+
 </head>
+
 <body>
-<h1>{{ name }}</h1>
 
-  <div id="bar">
+    <!-- -------------BEGIN NAV BAR --------------------- -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" id="badge" href="/">Doggie Data, Inc.</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav navbar-right ml-auto">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Client Portal
+                    </a>
+                    <div class="dropdown-menu navbar-li-a" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../static/clients/cruella.html">Cruella de Vil</a>
+                        <a class="dropdown-item" href="../static/clients/dorothy.html">Dorothy Gale</a>
+                        <a class="dropdown-item" href="../static/clients/sofia.html">Sofia Al-Azwar</a>
+                        <a class="dropdown-item" href="../static/clients/elle.html">Elle Woods</a>
+                    </div>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="care.html">Pet Care <span class="sr-only">(current)</span></a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="../static/clients/about.html">About Us</a>
+                </li>
 
 
-  </div>
-   <div class="col-md-2">
-          <aside class="filters">
-            <div class="panel panel-default">
-              <div class="panel-heading">Filter Search</div>
-              <div class="panel-body">
-                <form>
-                  <div class="form-group">
-                    <ul class="list-group" id="filters">
-                      <li class="filter list-group-item">
-                        <label for="date">Enter a Type</label>
-                        <input class="form-control" id="type" type="text" placeholder="Cat/Dog">
-                      </li>
-                      <li class="filter list-group-item">
-                        <label for="city">Enter Breed</label>
-                        <input class="form-control" id="breed" type="text" placeholder="Breed">
-                      </li>
-                      <li class="filter list-group-item">
-                        <label for="state">Enter Age</label>
-                        <input class="form-control" id="age" type="text" placeholder="age">
-                      </li>
-                        <li class="filter list-group-item">
-                        <label for="country">Enter Gender</label>
-                        <input class="form-control" id="gender" type="text" placeholder="gender">
-                        </li>
-                        <li class="filter list-group-item">
-                            <label for="shape">Enter a State</label>
-                            <input class="form-control" id="state" type="text" placeholder="state">
-                        </li>
-                         <li class="filter list-group-item">
-                            <label for="shape">Enter a City</label>
-                            <input class="form-control" id="city" type="text" placeholder="city">
-                        </li>
-                    </ul>
-                  </div>
-                  <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
-                </form>
-              </div>
+            </ul>
+
+        </div>
+    </nav>
+    <!-- -------------END NAV BAR --------------------- -->
+
+
+    <!-- -------------BEGIN LANDING CONTAINER --------------------- -->
+    <div class="container main-container">
+        <section class="row">
+            <div class="col-md-12 main-content" id="main-column">
+                <article>
+                    <h1 class="display-4 main-header"> welcome to doggie data, inc.<br>data for the modern pet-seeker</h1>
+                    <hr class="my-4">
+                </article>
             </div>
-          </aside>
+            <section class="row">
+                <div class="image round col-md-12">
+                    <img class="main-image-wrap img-fluid " src="../static/img/main.jpg">
+                    <h3 class=" text-center align-middle" id="index-text-box">
+                        <br>
+                        <br> Doggie Data, Inc. believes that everyone should be able to find the perfect pet. We let the data do the talking when it comes to finding the perfect new addition to your family.
+                        <br><br>Which breed is best with kids? Or in an apartment? What about a big back yard?
+                        <!-- <hr class="my-4"> -->
+                        <br><br> Queue up the questions, and we'll bring you the (data-driven) answers! Reach out today to schedule a consultation with our Sales team.
+
+                    </h3>
+                </div>
+            </section>
+
+        </section>
+    </div>
+    <!-- -------------END LANDING BLOCK --------------------- -->
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+
+</body>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Project 2</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- Dogs Title -->
+            <div class="row">
+                <div class="col-md-12 text-center" style="font-family: 'sans-serif';">
+                    <h1>Dogs</h1>
+                    <hr>
+                </div>
+            </div>
+            <!-- Dogs Color Menu -->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="well" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; text-align: center; border-radius: 25px; font-family: sans-serif; margin-bottom: 10px;">
+                        <h4 style="font-size: 18px; color: black;">Dog Coat Color</h4>
+                        <select id="selDogColor" onchange="optionChanged(this.value)" style="padding: 5px; font-size: 14px; border-radius: 25px;"></select>
+                    </div>
+                </div>
+            </div>
+            <!-- Dog Gauges -->
+            <div class="row">
+                <!-- Gauge 1 -->
+                <div class="col-md-4" style="margin-top: 20px; margin-bottom: 10px;">
+                    <div id="gaugeDog1" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; border-radius: 25px;"></div>
+                </div>
+                <!-- Gauge 2 -->
+                <div class="col-md-4" style="margin-top: 20px; margin-bottom: 10px;">
+                    <div id="gaugeDog2" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; border-radius: 25px;"></div>
+                </div>
+                <!-- Gauge 3 -->
+                <div class="col-md-4" style="margin-top: 20px; margin-bottom: 10px;">
+                    <div id="gaugeDog3" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; border-radius: 25px;"></div>
+                </div>
+            </div>
+            <!-- Dog Bar & Dog Pie -->
+            <div  class="row">
+                <!-- Bar -->
+                <div class="col-md-7" style="margin-top: 20px; margin-bottom: 10px;">
+                    <div id="barDog" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 20px; border-radius: 25px;"></div>
+                </div>
+                <!-- Pie -->
+                <div class="col-md-5" style="margin-top: 20px; margin-bottom: 10px;">
+                    <div id="pieDog" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 20px; border-radius: 25px;"></div>
+                </div>
+            </div>
+            <!-- Dog Bubble -->
+            <div class="row">
+                <!-- Bubble -->
+                <div class="col-md-12" style="margin-top: 20px; margin-bottom: 100px;">
+                    <div id="bubbleDog" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 20px; border-radius: 25px;"></div>
+                </div>
+            </div>
+            <hr style="height: 2px;">
+            <hr>
+            <!-- Cats Title -->
+            <div class="row">
+                <div class="col-md-12 text-center" style="font-family: 'sans-serif';">
+                    <h1>Cats</h1>
+                    <hr>
+                </div>
+            </div>
+            <!-- Cats Color Menu -->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="well" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; text-align: center; border-radius: 25px; font-family: sans-serif; margin-bottom: 10px;">
+                        <h4 style="font-size: 18px; color: black;">Cat Coat Color</h4>
+                        <select id="selCatColor" onchange="catOptionChanged(this.value)" style="padding: 5px; font-size: 14px; border-radius: 25px;"></select>
+                    </div>
+                </div>
+            </div>
+            <!-- Cat Gauges -->
+            <div class="row">
+                <!-- Gauge 1 -->
+                <div class="col-md-4" style="margin-top: 20px; margin-bottom: 10px;">
+                    <div id="gaugeCat1" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; border-radius: 25px;"></div>
+                </div>
+                <!-- Gauge 2 -->
+                <div class="col-md-4" style="margin-top: 20px; margin-bottom: 10px;">
+                    <div id="gaugeCat2" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; border-radius: 25px;"></div>
+                </div>
+                <!-- Gauge 3 -->
+                <div class="col-md-4" style="margin-top: 20px; margin-bottom: 10px;">
+                    <div id="gaugeCat3" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; border-radius: 25px;"></div>
+                </div>
+            </div>
+            <!-- Cat Bar & Cat Pie -->
+            <div class="row">
+                <!-- Bar -->
+                <div class="col-md-7" style="margin-top: 20px; margin-bottom: 10px;">
+                    <div id="barCat" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 20px; border-radius: 25px;"></div>
+                </div>
+                <!-- Pie -->
+                <div class="col-md-5" style="margin-top: 20px; margin-bottom: 10px;">
+                    <div id="pieCat" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 20px; border-radius: 25px;"></div>
+                </div>
+            </div>
+            <!-- Cat Bubble -->
+            <div class="row">
+                <!-- Bubble -->
+                <div class="col-md-12" style="margin-top: 20px; margin-bottom: 100px;">
+                    <div id="bubbleCat" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 20px; border-radius: 25px;"></div>
+                </div>
+            </div>
         </div>
 
-
-
-
-
-   <div>
-    <table id="pet-table" class="table table-striped">
-              <thead>
-                <tr>
-                  <th class="table-head">Type</th>
-                  <th class="table-head">Breeds</th>
-                  <th class="table-head">Age</th>
-                  <th class="table-head">Gender</th>
-                  <th class="table-head">State</th>
-                  <th class="table-head">City</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-    </div>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-   <script src="./static/js/charts.js"></script>
-<script src="./static/js/table.js"></script>
-</body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script language="javascript" type="text/javascript" src="../static/js/app.js"></script>
+    </body>
 </html>
