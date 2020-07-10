@@ -6,11 +6,9 @@ import os
 from flask_cors import CORS
 
 app = Flask(__name__)
-<<<<<<< HEAD
 app.config['JSON_SORT_KEYS'] = False
-=======
 CORS(app)
->>>>>>> 3479da245827876b2dec7206b8697489f5aeaea5
+
 
 db_url=os.environ["DATABASE_URL"]="postgres://lxnczqxnnsixtt:25c4af3fdf10105af3ccf6dcdb156d9b05dfa289a8ac251d505c35ca56355b96@ec2-34-192-173-173.compute-1.amazonaws.com:5432/d21o41cjku2a3l"
 # Add url path to DB in db_url ( the url you can find on HEROKU)
@@ -83,8 +81,7 @@ def cat_dogs():
 
 @app.route("/breeds")
 def breeds():
-<<<<<<< HEAD
-    breeds = db.session.query(Pet.type,Pet.breeds,func.count(Pet.id).label('total')).group_by(Pet.type,Pet.breeds).all()
+    breeds = db.session.query(Pet.type, Pet.breeds, func.count(Pet.id).label('total')).group_by(Pet.type,                                                                                           Pet.breeds).limit(2000)
     pet_schema = PetSchema(many=True)
     output = pet_schema.dump(breeds)
     return jsonify({"breeds": output})
@@ -96,12 +93,7 @@ def table():
     pet_schema = PetSchema(many=True)
     output = pet_schema.dump(table)
     return jsonify({"table": output})
-=======
-    breeds = db.session.query(Pet.type,Pet.breeds,func.count(Pet.id).label('total')).group_by(Pet.type,Pet.breeds).limit(2000)
-    pet_schema = PetSchema(many=True)
-    output = pet_schema.dump(breeds)
-    return jsonify({"breeds": output})
->>>>>>> 3479da245827876b2dec7206b8697489f5aeaea5
+
 
 if __name__ == "__main__":
     app.run(debug=True)
