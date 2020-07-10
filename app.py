@@ -33,6 +33,8 @@ class Pet(db.Model):
     city = db.Column(db.String)
     state = db.Column(db.String)
     postcode = db.Column(db.String)
+    lat = db.Column(db.String)
+    lng = db.Column(db.String)
 
 
 class PetSchema(ma.SQLAlchemyAutoSchema):
@@ -53,7 +55,9 @@ class PetSchema(ma.SQLAlchemyAutoSchema):
             'city',
             'postcode',
             'total',
-            'type'
+            'type',
+            'lat',
+            'lng'
         )
         ordered = True
 
