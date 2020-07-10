@@ -56,7 +56,7 @@ function init () {
                  width:0.8,
                  name: "Dogs",
           marker: {
-        color: '#FFCCCC',
+        color: '#48C9B0',
          line: {
       color: 'rgb(8,48,107)',
       width: 0.9
