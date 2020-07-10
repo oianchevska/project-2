@@ -11,10 +11,69 @@
 
 
   </div>
+   <div class="col-md-2">
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading">Filter Search</div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+                      <li class="filter list-group-item">
+                        <label for="date">Enter a Type</label>
+                        <input class="form-control" id="type" type="text" placeholder="Cat/Dog">
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="city">Enter Breed</label>
+                        <input class="form-control" id="breed" type="text" placeholder="Breed">
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="state">Enter Age</label>
+                        <input class="form-control" id="age" type="text" placeholder="age">
+                      </li>
+                        <li class="filter list-group-item">
+                        <label for="country">Enter Gender</label>
+                        <input class="form-control" id="gender" type="text" placeholder="gender">
+                        </li>
+                        <li class="filter list-group-item">
+                            <label for="shape">Enter a State</label>
+                            <input class="form-control" id="state" type="text" placeholder="state">
+                        </li>
+                         <li class="filter list-group-item">
+                            <label for="shape">Enter a City</label>
+                            <input class="form-control" id="city" type="text" placeholder="city">
+                        </li>
+                    </ul>
+                  </div>
+                  <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
 
 
+
+
+
+   <div>
+    <table id="pet-table" class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="table-head">Type</th>
+                  <th class="table-head">Breeds</th>
+                  <th class="table-head">Age</th>
+                  <th class="table-head">Gender</th>
+                  <th class="table-head">State</th>
+                  <th class="table-head">City</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+    </div>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
    <script src="./static/js/charts.js"></script>
+<script src="./static/js/table.js"></script>
 </body>
 </html>

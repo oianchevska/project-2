@@ -2,7 +2,7 @@
 function init () {
 
     console.log("init");
-    d3.json('https://unc-project-2.herokuapp.com/usdata').then(function (data) {
+    d3.json('http://127.0.0.1:5000/usdata').then(function (data) {
 
         console.log(data.usdata);
 
@@ -69,3 +69,4 @@ function init () {
 
 
 init();
+

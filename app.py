@@ -5,6 +5,7 @@ from sqlalchemy import func
 import os
 
 app = Flask(__name__)
+app.config['JSON_SORT_KEYS'] = False
 
 db_url=os.environ["DATABASE_URL"]
 # Add url path to DB in db_url ( the url you can find on HEROKU)
@@ -44,12 +45,14 @@ class PetSchema(ma.SQLAlchemyAutoSchema):
             'coat',
             'status',
             'status_changed_at',
-            'city',
             'state',
+            'city',
             'postcode',
             'total',
             'type'
         )
+        ordered=True
+
 
 @app.route("/")
 def index():
@@ -58,7 +61,7 @@ def index():
 
 @app.route("/pets")
 def data_pets():
-    pets=Pet.query.all()
+    pets=Pet.query.limit(2000)
     pet_schema=PetSchema(many=True)
     output=pet_schema.dump(pets)
     return jsonify({"pets":output})
@@ -71,6 +74,20 @@ def cat_dogs():
     output = pet_schema.dump(usdata)
     return jsonify({"usdata": output})
 
+@app.route("/breeds")
+def breeds():
+    breeds = db.session.query(Pet.type,Pet.breeds,func.count(Pet.id).label('total')).group_by(Pet.type,Pet.breeds).all()
+    pet_schema = PetSchema(many=True)
+    output = pet_schema.dump(breeds)
+    return jsonify({"breeds": output})
+
+
+@app.route("/table")
+def table():
+    table = db.session.query(Pet.type, Pet.breeds,Pet.age,Pet.gender,Pet.state,Pet.city).limit(2000)
+    pet_schema = PetSchema(many=True)
+    output = pet_schema.dump(table)
+    return jsonify({"table": output})
 
 if __name__ == "__main__":
     app.run(debug=True)
