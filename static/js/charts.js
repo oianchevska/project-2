@@ -39,18 +39,28 @@ function init () {
     var trace1= { x: state_cat,
                  y: total_cat,
                  type: "bar",
+                 width:0.8,
                  name:"Cats",
         marker: {
-    color: 'rgb(241, 196, 15)'
+    color: '#CCCCCC',
+         line: {
+      color: 'rgb(8,48,107)',
+      width: 0.9
+    }
   }
                 };
 
       var trace2= { x: state_dog,
                   y: total_dog,
                  type: "bar",
+                 width:0.8,
                  name: "Dogs",
           marker: {
-    color: '#990000'
+        color: '#FFCCCC',
+         line: {
+      color: 'rgb(8,48,107)',
+      width: 0.9
+    }
   }
                 };
                 var data = [trace1,trace2]
