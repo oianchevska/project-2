@@ -3,12 +3,15 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 from sqlalchemy import func
 import os
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
-db_url=os.environ["DATABASE_URL"]
+db_url=os.environ["DATABASE_URL"]="postgres://lxnczqxnnsixtt:25c4af3fdf10105af3ccf6dcdb156d9b05dfa289a8ac251d505c35ca56355b96@ec2-34-192-173-173.compute-1.amazonaws.com:5432/d21o41cjku2a3l"
 # Add url path to DB in db_url ( the url you can find on HEROKU)
 app.config["SQLALCHEMY_DATABASE_URI"]=db_url
+
 
 db=SQLAlchemy(app)
 ma = Marshmallow(app)
@@ -36,6 +39,7 @@ class PetSchema(ma.SQLAlchemyAutoSchema):
             'id',
             'organization_id',
             'type',
+            'breeds',
             'breeds',
             'colors',
             'age',
@@ -71,6 +75,12 @@ def cat_dogs():
     output = pet_schema.dump(usdata)
     return jsonify({"usdata": output})
 
+@app.route("/breeds")
+def breeds():
+    breeds = db.session.query(Pet.type,Pet.breeds,func.count(Pet.id).label('total')).group_by(Pet.type,Pet.breeds).limit(2000)
+    pet_schema = PetSchema(many=True)
+    output = pet_schema.dump(breeds)
+    return jsonify({"breeds": output})
 
 if __name__ == "__main__":
     app.run(debug=True)

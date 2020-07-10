@@ -227,7 +227,7 @@ h3 {
 
 #banner-cruella {
     padding: 12em 0 10em 0;
-    background-image: url('../images/cruella.png');
+    background-image: url('../images/CruellaBanner.png');
     background-size: cover;
     background-position: top;
     background-attachment: fixed;
@@ -238,7 +238,7 @@ h3 {
 
 #banner-cruella h1 {
     font-size: 3.5em;
-    font-weight: 100;
+    font-weight: 600;
     color: #1B2631;
     line-height: 1em;
     margin: 0 0 0.5em 0;
@@ -293,7 +293,7 @@ h3 {
 
 #banner-dorothy {
     padding: 12em 0 10em 0;
-    background-image: url('../images/dorothy.jpg');
+    background-image: url('../images/Untitled-2.png');
     background-size: cover;
     background-position: top;
     background-attachment: fixed;
@@ -304,7 +304,7 @@ h3 {
 
 #banner-dorothy h1 {
     font-size: 3.5em;
-    font-weight: 100;
+    font-weight: 600;
     color: #1B2631;
     line-height: 1em;
     margin: 0 0 0.5em 0;
@@ -359,7 +359,7 @@ h3 {
 
 #banner-sofia {
     padding: 12em 0 10em 0;
-    background-image: url('../images/sofia.jpg');
+    background-image: url('../images/sofia1.jpeg');
     background-size: cover;
     background-position: top;
     background-attachment: fixed;
@@ -370,7 +370,7 @@ h3 {
 
 #banner-sofia h1 {
     font-size: 3.5em;
-    font-weight: 100;
+    font-weight: 600;
     color: #1B2631;
     line-height: 1em;
     margin: 0 0 0.5em 0;
@@ -436,7 +436,7 @@ h3 {
 
 #banner-elle h1 {
     font-size: 3.5em;
-    font-weight: 100;
+    font-weight: 600;
     color: #1B2631;
     line-height: 1em;
     margin: 0 0 0.5em 0;
