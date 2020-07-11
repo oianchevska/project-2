@@ -1,4 +1,4 @@
-# Wicked Tailor 
+# <div align="center">Wicked Tailor</div>
 ![Cruella De Vil](cruella.jpg)
 #### View the app [here](https://unc-project-2.herokuapp.com/).
 ---
@@ -19,4 +19,37 @@
 ---
 ### The App
 
+**Data**
+
 Pets data has been collected using RESTful API calls from the Petfinder API allowing us to access database of thousands of pets available for adaption in the U.S.
+
+**Tools**
+
+The following tools have been utilized to create the app:
+
++ Backend:
+  - *Jupyter Notebook*
+  - *Python*
+  - *PostgreSQL*
+  - *Flask-SQLAlchemy* 
+  - *Marshmallow*
+  
++ Frontend:
+  - *JavaScript*
+  - *Bootstrap*
+  - *HTML*
+  - *CSS*
+  - *Plotly*
+  - *Leaflet*
+  - *Chartjs*
+  
++ Hosting:
+  - *Heroku*
+
+### Visualizations
+
+**Cruella de Vil Page**
+
+Polar charts demonstrate a total amount of available dogs/cats by breed. These charts are interactive. Clicking on each breed will take it out of consideration and change the whole chart to demonstrate a new quantitative relationship between breeds.
+
+![Polar Chart](polar.png)
