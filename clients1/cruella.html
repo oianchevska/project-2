@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF 8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Doggie Data, Inc.</title>
+    <style>
+        #expimg {
+            margin: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- -------------BEGIN NAV BAR --------------------- -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" id="badge" href="/">Doggie Data, Inc.</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav navbar-right ml-auto">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Client Portal
+                    </a>
+                    <div class="dropdown-menu navbar-li-a" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="cruella.html">Cruella de Vil</a>
+                        <a class="dropdown-item" href="dorothy.html">Dorothy Gale</a>
+                        <a class="dropdown-item" href="sofia.html">Sofia Al-Azwar</a>
+                        <a class="dropdown-item" href="elle.html">Elle Woods</a>
+                    </div>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="../care.html">Pet Care <span class="sr-only">(current)</span></a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+
+
+            </ul>
+
+        </div>
+    </nav>
+    <!-- -------------END NAV BAR --------------------- -->
+
+    <section id="banner-cruella">
+
+        <h1 style="background-color: rgb(255, 255, 255, .75);">Welcome, Valued Customer!</h1>
+        <p style="background-color: rgb(255, 255, 255, .75)">Your requested dashboard is available below. Please contact your Account Manager with any additional requests.</p>
+    </section>
+    <!-- -------------BEGIN LANDING CONTAINER --------------------- -->
+    <div class="container main-container">
+        <section class="row">
+            <!-- -------------BEGIN LANDING-FEATURED CONTAINER --------------------- -->
+
+            <div class="col-md-12 main-content" id="main-column">
+                <article>
+                    <h1 class="display-4 main-header">Client: Cruella de Vil</h1>
+                    <hr class="my-4">
+                    <div class="box">
+                        <p class="lead main-p text-left">Former client, Ms. Cruella de Vil, has requested that we include: <br><br>
+                            <dl class="lead dl-p text-left">
+                                <li> how many dogs and cats are available by breed. </li><br>
+                                <li> the age, size, and breed associated with the most common coat colors. </li><br>
+                                <li> the most common colors of dog and cat coats. </li><br>
+                            </dl>
+                        </p>
+                        <br><br>
+                        <p class="lead main-p text-center">
+                            After compiling our report using the PetFinder API and delivering the interactive dashboard to Ms. De Vil, we grew suspicious of her keen interest in adopting ALL of the dogs and cats. The true intentions of Ms. De Vil were exposed - to supply her tailor
+                            shop for new coats!
+                            <br> <br>
+                        </p>
+                    </div>
+                    <p class="alert-text text-center">This account is currently suspended and all information has been reported to local authorities in full compliance with legal regulations. <br><br> Doggie Data, Inc. requests that all inquiries be directed to our media office.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <canvas id="dogBreedChart"></canvas>
+            </div>
+        </div>
+        <!-- Dogs Title -->
+        <div class="row">
+            <div class="col-md-12 text-center" style="font-family: 'sans-serif';">
+                <!-- <h1>Dogs</h1> -->
+                <hr>
+            </div>
+        </div>
+        <!-- Dogs Color Menu -->
+        <div class="row">
+            <div class="col-md-3">
+                <div class="well" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; text-align: center; border-radius: 25px; font-family: sans-serif; margin-bottom: 10px;">
+                    <h4 style="font-size: 18px; color: black;">Dog Coat Color</h4>
+                    <select id="selDogColor" onchange="optionChanged(this.value)" style="padding: 5px; font-size: 14px; border-radius: 25px;"></select>
+                </div>
+            </div>
+        </div>
+        <!-- Dog Gauges -->
+        <div class="row">
+            <!-- Gauge 1 -->
+            <div class="col-md-4" style="margin-top: 20px; margin-bottom: 10px;">
+                <div id="gaugeDog1" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; border-radius: 25px;"></div>
+            </div>
+            <!-- Gauge 2 -->
+            <div class="col-md-4" style="margin-top: 20px; margin-bottom: 10px;">
+                <div id="gaugeDog2" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; border-radius: 25px;"></div>
+            </div>
+            <!-- Gauge 3 -->
+            <div class="col-md-4" style="margin-top: 20px; margin-bottom: 10px;">
+                <div id="gaugeDog3" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; border-radius: 25px;"></div>
+            </div>
+        </div>
+        <!-- Dog Bar & Dog Pie -->
+        <div class="row">
+            <!-- Bar -->
+            <div class="col-md-7" style="margin-top: 20px; margin-bottom: 10px;">
+                <div id="barDog" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 20px; border-radius: 25px;"></div>
+            </div>
+            <!-- Pie -->
+            <div class="col-md-5" style="margin-top: 20px; margin-bottom: 10px;">
+                <div id="pieDog" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 20px; border-radius: 25px;"></div>
+            </div>
+        </div>
+        <!-- Dog Bubble -->
+        <div class="row">
+            <!-- Bubble -->
+            <div class="col-md-12" style="margin-top: 20px; margin-bottom: 100px;">
+                <div id="bubbleDog" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 20px; border-radius: 25px;"></div>
+            </div>
+        </div>
+        <hr style="height: 2px;">
+        <hr>
+        <hr class="my-4">
+        <!-- Cats Title -->
+        <div class="row">
+            <div class="col-md-12 text-center" style="font-family: 'sans-serif';">
+                <!-- <h1>Cats</h1> -->
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <canvas id="catBreedChart"></canvas>
+            </div>
+        </div>
+        <!-- Cats Color Menu -->
+        <div class="row">
+            <div class="col-md-3">
+                <div class="well" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; text-align: center; border-radius: 25px; font-family: sans-serif; margin-bottom: 10px;">
+                    <h4 style="font-size: 18px; color: black;">Cat Coat Color</h4>
+                    <select id="selCatColor" onchange="catOptionChanged(this.value)" style="padding: 5px; font-size: 14px; border-radius: 25px;"></select>
+                </div>
+            </div>
+        </div>
+        <!-- Cat Gauges -->
+        <div class="row">
+            <!-- Gauge 1 -->
+            <div class="col-md-4" style="margin-top: 20px; margin-bottom: 10px;">
+                <div id="gaugeCat1" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; border-radius: 25px;"></div>
+            </div>
+            <!-- Gauge 2 -->
+            <div class="col-md-4" style="margin-top: 20px; margin-bottom: 10px;">
+                <div id="gaugeCat2" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; border-radius: 25px;"></div>
+            </div>
+            <!-- Gauge 3 -->
+            <div class="col-md-4" style="margin-top: 20px; margin-bottom: 10px;">
+                <div id="gaugeCat3" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 10px; border-radius: 25px;"></div>
+            </div>
+        </div>
+        <!-- Cat Bar & Cat Pie -->
+        <div class="row">
+            <!-- Bar -->
+            <div class="col-md-7" style="margin-top: 20px; margin-bottom: 10px;">
+                <div id="barCat" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 20px; border-radius: 25px;"></div>
+            </div>
+            <!-- Pie -->
+            <div class="col-md-5" style="margin-top: 20px; margin-bottom: 10px;">
+                <div id="pieCat" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 20px; border-radius: 25px;"></div>
+            </div>
+        </div>
+        <!-- Cat Bubble -->
+        <div class="row">
+            <!-- Bubble -->
+            <div class="col-md-12" style="margin-top: 20px; margin-bottom: 100px;">
+                <div id="bubbleCat" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 20px; border-radius: 25px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script language="javascript" type="text/javascript" src="../js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="../js/dogbreeds.js"></script>
+    <script src="../js/catbreeds.js"></script>
+</body>
+
+</html>

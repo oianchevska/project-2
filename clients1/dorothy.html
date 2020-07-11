@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<!-- create a root component that will contain all of the doc -->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF 8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+
+    <!-- Marker Cluster CSS -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/map.css">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Doggie Data, Inc.</title>
+    <style>
+        #expimg {
+            margin: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- -------------BEGIN NAV BAR --------------------- -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" id="badge" href="/">Doggie Data, Inc.</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav navbar-right ml-auto">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Client Portal
+                    </a>
+                    <div class="dropdown-menu navbar-li-a" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="cruella.html">Cruella de Vil</a>
+                        <a class="dropdown-item" href="dorothy.html">Dorothy Gale</a>
+                        <a class="dropdown-item" href="sofia.html">Sofia Al-Azwar</a>
+                        <a class="dropdown-item" href="elle.html">Elle Woods</a>
+                    </div>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="../care.html">Pet Care <span class="sr-only">(current)</span></a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+
+
+            </ul>
+
+        </div>
+    </nav>
+    <!-- -------------END NAV BAR --------------------- -->
+
+    <section id="banner-dorothy">
+        <h1 style="background-color: rgb(255, 255, 255, .75)">Welcome, Valued Customer!</h1>
+        <p style="background-color: rgb(255, 255, 255, .75)">Your requested dashboard is available below. Please contact your Account Manager with any additional requests.</p>
+    </section>
+    <!-- -------------BEGIN LANDING CONTAINER --------------------- -->
+    <div class="container main-container">
+        <section class="row">
+            <!-- -------------BEGIN LANDING-FEATURED CONTAINER --------------------- -->
+
+            <div class="col-md-12 main-content" id="main-column">
+                <article>
+                    <h1 class="display-4 main-header">Client: Dorothy Gale</h1>
+                    <hr class="my-4">
+                    <div class="box">
+                        <p class="lead main-p text-left">Ms. Dorothy Gale has requested that we include: <br><br>
+                            <dl class="lead dl-p text-left">
+                                <li> the location of dogs and cats available for adoption.</li><br>
+                            </dl>
+                        </p>
+                        <br><br>
+                        <p class="lead main-p text-center">
+                            Doggie Data client, Dorothy Gale, has requested our services to complete a dashboard with the locations of the dogs and cats available for adoption. Client has shared that she is interested in finding a companion for her current pet, Toto. She seems particularly interested in finding pets near Kansas. Dorothy mentioned a Yellow Brick Rd, but our engineers cannot find that location in our mapping software. 
+                            <br> <br>
+                        </p>
+                    </div>
+
+            <div class="col-md-15">
+
+            <div class="card" style="box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 20px; border-radius: 25px">
+              <div class="card-body text-lg-right">
+                <div id="bar"></div>
+              </div>
+            </div>
+
+
+        </section>
+        </p>
+
+
+
+        </article>
+
+
+        </div>
+
+            <div class="card"  id="map" style="margin-left: 160px;margin-right: 160px;box-shadow: 0 8px 14px -6px rgb(74, 74, 74); padding: 20px; border-radius: 25px;height: 500px;margin-bottom: 100px"></div>
+
+
+
+    </div>
+    </section>
+    </div>
+    <!-- -------------END LANDING BLOCK --------------------- -->
+
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+    <!-- d3 JS -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <!-- Marker Cluster JS -->
+    <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+
+    <!-- Our JS -->
+    <script type="text/javascript" src="../js/config.js"></script>
+    <script type="text/javascript" src="../js/map_logic.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="../js/charts.js"></script>
+</body>
+
+</html>
+
