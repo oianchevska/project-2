@@ -1,5 +1,5 @@
 # Wicked Tailor 
-![Cruella De Vil](../../homepractice/cruella.jpg)
+![Cruella De Vil](cruella.jpg)
 #### View the app [here](https://unc-project-2.herokuapp.com/).
 ---
 ### The Story
