@@ -160,13 +160,13 @@ function getBreedsAndColors(){
                     pad:{t: 0, r: 0, l: -45, b: 0}
                 },
                 margin: {
-                    l: 240,
-                    r: 0,
+                    l: 200,
+                    r: 20,
                     t: 100,
                     b: 50
                 },
                 height: 550,
-                width: 550,
+                width: 540,
                 xaxis: {
                     tickwidth: 10,
                     tickcolor: '#ffffff',
@@ -668,7 +668,7 @@ function getDogBubble(color) {
                 },
                 margin: {l: 100, r: 50, t:100, b: 35},
                 height: 550,
-                width: 1100,
+                width: 1080,
                 xaxis: {
                     ticks: '',
                     showticklabels: false
@@ -766,7 +766,7 @@ function getCatBubble(color) {
                 },
                 margin: {l: 120, r: 50, t:100, b: 35},
                 height: 550,
-                width: 1100,
+                width: 1080,
                 xaxis: {
                     ticks: '',
                     showticklabels: false
