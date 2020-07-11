@@ -63,3 +63,17 @@ Bar chart demonstrates the total amount of available dogs/cats by the most commo
 Gauges show how many baby, young, adult dogs/cats are available for a selected coat color.
 
 ![Gauge Charts](img/gauges.png)
+
+Donut chart demonstrates percentage of small, medium, large dogs/cats filtered by coat colar.
+
+![Donut Chart](img/donut.png)
+
+The bubble chart represents a total amount of dogs/cats for a specific coat color by breed.
+
+![Bubble Chart](img/bubble.png)
+
+- *Dorothy Gale Page*
+
+Bar chart shows total amount of dogs and cats available for adaption in each state.
+
+![Bar Chart](img/bars.png)
