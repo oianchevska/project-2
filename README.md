@@ -77,3 +77,13 @@ The bubble chart represents a total amount of dogs/cats for a specific coat colo
 Bar chart shows total amount of dogs and cats available for adaption in each state.
 
 ![Bar Chart](img/bars.png)
+
+The interactive map shows locations of pet shelters/animal welfare organizations and available dogs/cats with a detailed information for each. 
+
+![Map](img/map.png)
+
+- *Sofia Al-Azwar Page*
+
+Interactive table can be used to filter data by pet type, gender, breed, age, state, and ciry.
+
+![Table](img/table.png)
