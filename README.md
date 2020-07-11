@@ -51,11 +51,15 @@ The following tools have been utilized to create the app:
 
 - *Cruella de Vil Page*
 
-Polar charts demonstrate a total amount of available dogs/cats by breed. These charts are interactive. Clicking on each breed will take it out of consideration and change the whole chart to demonstrate a new quantitative relationship between breeds.
+Polar charts demonstrate a total amount of available dogs/cats by breed. These charts are interactive. Clicking on each breed will take it out of consideration and change the     whole chart to demonstrate a new quantitative relationship between breeds.
 
 ![Polar Chart](img/polar.png)
 
 
-Bar chart demonstrates the total amount of available dogs/cats by the most common coat colors and the rest of visualizations on the Cruella’s page are filtered by these common colors.
+Bar chart demonstrates the total amount of available dogs/cats by the most common coat colors and the rest of visualizations on the Cruella’s page are filtered by these common    colors.
 
 ![Bar Chart](img/bar.png)
+
+Gauges show how many baby, young, adult dogs/cats are available for a selected coat color.
+
+![Gauge Charts](img/gauges.png)
